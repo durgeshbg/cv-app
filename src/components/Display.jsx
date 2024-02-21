@@ -1,4 +1,5 @@
 import Education from './Education';
+import Experience from './Experience';
 import General from './General';
 
 function Display({ name, email, phone, education, experience }) {
@@ -7,6 +8,7 @@ function Display({ name, email, phone, education, experience }) {
       <div className='display'>
         <General {...{ name, email, phone }} />
         <Education {...education} />
+        <Experience {...experience} />
       </div>
     </>
   );
