@@ -42,6 +42,22 @@ function Main() {
       newState.phone = e.target.value;
       setState(newState);
     },
+
+    changeEname: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.education[e.target.id].name = e.target.value;
+      setState(newState);
+    },
+    changeEtitle: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.education[e.target.id].title = e.target.value;
+      setState(newState);
+    },
+    changeEdate: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.education[e.target.id].date = e.target.value;
+      setState(newState);
+    },
   };
 
   return (
