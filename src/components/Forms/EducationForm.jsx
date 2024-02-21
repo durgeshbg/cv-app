@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import add from '/add.svg';
 import FormMenu from '../FormMenu';
 
 function EducationForm({ education, formHandlers }) {
@@ -54,7 +55,7 @@ function EducationForm({ education, formHandlers }) {
                 />
               </div>
             ) : (
-              <div className='lock'>
+              <div key={id} className='lock'>
                 <div>Name of the school: {education[id].name}</div>
                 <div>Title of study: {education[id].title}</div>
                 <div>Date of completion: {education[id].date}</div>
@@ -69,6 +70,10 @@ function EducationForm({ education, formHandlers }) {
             );
           }
         })}
+
+        <button className='add' onClick={formHandlers.addEdu}>
+          Add <img src={add} alt='add' />
+        </button>
       </div>
     </>
   );
