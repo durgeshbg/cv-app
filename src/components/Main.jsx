@@ -58,7 +58,14 @@ function Main() {
       newState.education[e.target.id].date = e.target.value;
       setState(newState);
     },
-
+    addEdu: () => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.education = {
+        ...newState.education,
+        [Date.now().toString(36)]: { name: '', title: '', date: '', isActive: true },
+      };
+      setState(newState);
+    },
     deleteEdu: (e) => {
       if (Object.keys(state.education).length > 1) {
         const newState = JSON.parse(JSON.stringify(state));
