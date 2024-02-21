@@ -46,7 +46,7 @@ function GeneralForm({ name, phone, email, formHandlers }) {
         </div>
       )}
 
-      <FormMenu isActive={isActive} setIsActive={setIsActive} />
+      <FormMenu isActive={isActive} setIsActive={setIsActive} isGeneral={true} />
     </>
   );
 }
