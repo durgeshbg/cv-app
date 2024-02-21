@@ -2,7 +2,13 @@ import lock from '/lock.svg';
 import unlock from '/unlock.svg';
 import remove from '/cross.svg';
 
-function FormMenu({ isActive, setIsActive, isGeneral = false }) {
+function FormMenu({
+  isActive,
+  setIsActive,
+  isGeneral = false,
+  id = 'none',
+  handleDelete = 'none',
+}) {
   return (
     <>
       <button onClick={() => setIsActive(!isActive)}>
@@ -11,7 +17,7 @@ function FormMenu({ isActive, setIsActive, isGeneral = false }) {
       </button>
 
       {!isGeneral && (
-        <button className='remove'>
+        <button id={id} className='remove' onClick={handleDelete}>
           Remove <img src={remove} alt='remove' />
         </button>
       )}

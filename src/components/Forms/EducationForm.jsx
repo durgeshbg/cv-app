@@ -46,7 +46,12 @@ function EducationForm({ education, formHandlers }) {
                   </label>
                 </div>
 
-                <FormMenu isActive={isActive} setIsActive={setIsActive} />
+                <FormMenu
+                  isActive={isActive}
+                  setIsActive={setIsActive}
+                  id={id}
+                  handleDelete={formHandlers.deleteEdu}
+                />
               </div>
             ) : (
               <div className='lock'>
@@ -54,7 +59,12 @@ function EducationForm({ education, formHandlers }) {
                 <div>Title of study: {education[id].title}</div>
                 <div>Date of completion: {education[id].date}</div>
 
-                <FormMenu isActive={isActive} setIsActive={setIsActive} />
+                <FormMenu
+                  isActive={isActive}
+                  setIsActive={setIsActive}
+                  id={id}
+                  handleDelete={formHandlers.deleteEdu}
+                />
               </div>
             );
           }
