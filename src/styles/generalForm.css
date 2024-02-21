@@ -1,0 +1,7 @@
+.form.general {
+  display: flex;
+  width: 280px;
+  flex-wrap: wrap;
+  border: 0.1px solid black;
+  gap: 10px;
+}
