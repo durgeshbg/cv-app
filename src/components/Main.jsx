@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Display from './Display';
+import From from './Forms/Form';
 import '../styles/Main.css';
 
 function Main() {
@@ -46,6 +47,7 @@ function Main() {
   return (
     <>
       <main>
+        <From state={state} formHandlers={formHandlers} />
         <Display {...state} />
       </main>
     </>
