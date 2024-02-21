@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import lock from '/lock.svg';
+import unlock from '/unlock.svg';
 import '../../styles/GeneralForm.css';
-import FormMenu from '../FormMenu';
 
 function GeneralForm({ name, phone, email, formHandlers }) {
   const [isActive, setIsActive] = useState(true);
@@ -46,7 +47,10 @@ function GeneralForm({ name, phone, email, formHandlers }) {
         </div>
       )}
 
-      <FormMenu isActive={isActive} setIsActive={setIsActive} isGeneral={true} />
+      <button onClick={() => setIsActive(!isActive)}>
+        <img src={isActive ? unlock : lock} alt={isActive ? 'save' : 'edit'} />
+        {isActive ? 'Save' : 'Edit'}
+      </button>
     </>
   );
 }

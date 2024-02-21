@@ -1,5 +1,7 @@
 import add from '/add.svg';
-import FormMenu from '../FormMenu';
+import lock from '/lock.svg';
+import unlock from '/unlock.svg';
+import remove from '/cross.svg';
 
 function EducationForm({ education, formHandlers }) {
   return (
@@ -45,12 +47,12 @@ function EducationForm({ education, formHandlers }) {
                   </label>
                 </div>
 
-                <FormMenu
-                  isActive={education[id].isActive}
-                  setIsActive={formHandlers.setIsActiveEdu}
-                  id={id}
-                  handleDelete={formHandlers.deleteEdu}
-                />
+                <button id={id} onClick={formHandlers.setIsActiveEdu}>
+                  <img src={unlock} alt='save' /> {'Save'}
+                </button>
+                <button id={id} className='remove' onClick={formHandlers.deleteEdu}>
+                  Remove <img src={remove} alt='remove' />
+                </button>
               </div>
             ) : (
               <div key={id} className='lock'>
@@ -58,12 +60,12 @@ function EducationForm({ education, formHandlers }) {
                 <div>Title of study: {education[id].title}</div>
                 <div>Date of completion: {education[id].date}</div>
 
-                <FormMenu
-                  isActive={education[id].isActive}
-                  setIsActive={formHandlers.setIsActiveEdu}
-                  id={id}
-                  handleDelete={formHandlers.deleteEdu}
-                />
+                <button id={id} onClick={formHandlers.setIsActiveEdu}>
+                  <img src={lock} alt='edit' /> {'Edit'}
+                </button>
+                <button id={id} className='remove' onClick={formHandlers.deleteEdu}>
+                  Remove <img src={remove} alt='remove' />
+                </button>
               </div>
             );
           }
