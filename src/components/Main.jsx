@@ -23,6 +23,7 @@ function Main() {
         responsibilities: '',
         fromDate: '',
         toDate: '',
+        isActive: true,
       },
     },
   });
@@ -80,6 +81,62 @@ function Main() {
       const newState = JSON.parse(JSON.stringify(state));
       newState.education[e.target.id].isActive =
         !newState.education[e.target.id].isActive;
+      setState(newState);
+    },
+
+    changeCname: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.experience[e.target.id].name = e.target.value;
+      setState(newState);
+    },
+    changeCposition: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.experience[e.target.id].position = e.target.value;
+      setState(newState);
+    },
+    changeCresponsibilities: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.experience[e.target.id].responsibilities = e.target.value;
+      setState(newState);
+    },
+    changeCfdate: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.experience[e.target.id].fromDate = e.target.value;
+      setState(newState);
+    },
+    changeCtdate: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.experience[e.target.id].toDate = e.target.value;
+      setState(newState);
+    },
+    addCom: () => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.experience = {
+        ...newState.experience,
+        [Date.now().toString(36)]: {
+          name: '',
+          position: '',
+          responsibilities: '',
+          fromDate: '',
+          toDate: '',
+          isActive: true,
+        },
+      };
+      setState(newState);
+    },
+    deleteCom: (e) => {
+      if (Object.keys(state.experience).length > 1) {
+        const newState = JSON.parse(JSON.stringify(state));
+        delete newState.experience[e.target.id];
+        setState(newState);
+      } else {
+        console.log('Error: minimum one experience field required');
+      }
+    },
+    setIsActiveCom: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.experience[e.target.id].isActive =
+        !newState.experience[e.target.id].isActive;
       setState(newState);
     },
   };
