@@ -1,0 +1,11 @@
+.display {
+  font-family: monospace;
+  font-weight: bold;
+  border: 0.1px solid black;
+  width: 530px;
+  height: 75dvh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
