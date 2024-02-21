@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Display from './Display';
 import '../styles/Main.css';
 
 function Main() {
@@ -27,6 +28,7 @@ function Main() {
   return (
     <>
       <main>
+        <Display {...state} />
       </main>
     </>
   );
