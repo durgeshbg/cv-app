@@ -13,6 +13,7 @@ function Main() {
         name: '',
         title: '',
         date: '',
+        isActive: true,
       },
     },
     experience: {
@@ -74,6 +75,12 @@ function Main() {
       } else {
         console.log('Error: minimum one education field required');
       }
+    },
+    setIsActiveEdu: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.education[e.target.id].isActive =
+        !newState.education[e.target.id].isActive;
+      setState(newState);
     },
   };
 

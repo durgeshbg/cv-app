@@ -11,7 +11,7 @@ function FormMenu({
 }) {
   return (
     <>
-      <button onClick={() => setIsActive(!isActive)}>
+      <button id={id} onClick={setIsActive}>
         <img src={isActive ? unlock : lock} alt={isActive ? 'save' : 'edit'} />
         {isActive ? 'Save' : 'Edit'}
       </button>

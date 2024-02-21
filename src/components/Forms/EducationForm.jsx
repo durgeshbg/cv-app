@@ -1,15 +1,13 @@
-import { useState } from 'react';
 import add from '/add.svg';
 import FormMenu from '../FormMenu';
 
 function EducationForm({ education, formHandlers }) {
-  const [isActive, setIsActive] = useState(true);
   return (
     <>
       <div className='education'>
         {Object.keys(education).map((id) => {
           {
-            return isActive ? (
+            return education[id].isActive ? (
               <div key={id} className={id + ' form'}>
                 <div className='name'>
                   <label>
@@ -48,8 +46,8 @@ function EducationForm({ education, formHandlers }) {
                 </div>
 
                 <FormMenu
-                  isActive={isActive}
-                  setIsActive={setIsActive}
+                  isActive={education[id].isActive}
+                  setIsActive={formHandlers.setIsActiveEdu}
                   id={id}
                   handleDelete={formHandlers.deleteEdu}
                 />
@@ -61,8 +59,8 @@ function EducationForm({ education, formHandlers }) {
                 <div>Date of completion: {education[id].date}</div>
 
                 <FormMenu
-                  isActive={isActive}
-                  setIsActive={setIsActive}
+                  isActive={education[id].isActive}
+                  setIsActive={formHandlers.setIsActiveEdu}
                   id={id}
                   handleDelete={formHandlers.deleteEdu}
                 />
