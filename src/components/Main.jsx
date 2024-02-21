@@ -25,6 +25,24 @@ function Main() {
     },
   });
 
+  const formHandlers = {
+    changeName: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.name = e.target.value;
+      setState(newState);
+    },
+    changeEmail: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.email = e.target.value;
+      setState(newState);
+    },
+    changePhone: (e) => {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.phone = e.target.value;
+      setState(newState);
+    },
+  };
+
   return (
     <>
       <main>
