@@ -58,6 +58,16 @@ function Main() {
       newState.education[e.target.id].date = e.target.value;
       setState(newState);
     },
+
+    deleteEdu: (e) => {
+      if (Object.keys(state.education).length > 1) {
+        const newState = JSON.parse(JSON.stringify(state));
+        delete newState.education[e.target.id];
+        setState(newState);
+      } else {
+        console.log('Error: minimum one education field required');
+      }
+    },
   };
 
   return (
