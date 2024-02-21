@@ -9,7 +9,7 @@ function Main() {
     email: '',
     phone: '',
     education: {
-      deafult: {
+      default: {
         name: '',
         title: '',
         date: '',
