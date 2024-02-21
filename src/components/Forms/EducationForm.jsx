@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import lock from '/lock.svg';
-import unlock from '/unlock.svg';
+import FormMenu from '../FormMenu';
 
 function EducationForm({ education, formHandlers }) {
   const [isActive, setIsActive] = useState(true);
@@ -47,9 +46,7 @@ function EducationForm({ education, formHandlers }) {
                   </label>
                 </div>
 
-                <button onClick={() => setIsActive(!isActive)}>
-                  {'Save '} <img src={unlock} alt='save' />
-                </button>
+                <FormMenu isActive={isActive} setIsActive={setIsActive} />
               </div>
             ) : (
               <div className='lock'>
@@ -57,9 +54,7 @@ function EducationForm({ education, formHandlers }) {
                 <div>Title of study: {education[id].title}</div>
                 <div>Date of completion: {education[id].date}</div>
 
-                <button onClick={() => setIsActive(!isActive)}>
-                  {'Edit'} <img src={lock} alt='edit' />
-                </button>
+                <FormMenu isActive={isActive} setIsActive={setIsActive} />
               </div>
             );
           }
