@@ -1,7 +1,7 @@
+import EducationForm from './EducationForm';
 import GeneralForm from './GeneralFrom';
 
 function From({ state, formHandlers }) {
-  
   return (
     <>
       <div className='form'>
@@ -11,6 +11,7 @@ function From({ state, formHandlers }) {
           email={state.email}
           formHandlers={formHandlers}
         />
+        <EducationForm education={state.education} formHandlers={formHandlers} />
       </div>
     </>
   );
