@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import lock from '/lock.svg';
 import unlock from '/unlock.svg';
-import '../../styles/GeneralForm.css';
 
 function GeneralForm({ name, phone, email, formHandlers }) {
   const [isActive, setIsActive] = useState(true);
