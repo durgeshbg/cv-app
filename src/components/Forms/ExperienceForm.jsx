@@ -65,21 +65,23 @@ function ExperienceForm({ experience, formHandlers }) {
                   />
                 </div>
 
-                <button
-                  data-itemid={id}
-                  className='save'
-                  onClick={formHandlers.setIsActiveCom}
-                >
-                  <img src={unlock} alt='save' /> {'Save'}
-                </button>
+                <div className='buttons'>
+                  <button
+                    data-itemid={id}
+                    className='save'
+                    onClick={formHandlers.setIsActiveCom}
+                  >
+                    <img src={unlock} alt='save' /> {'Save'}
+                  </button>
 
-                <button
-                  data-itemid={id}
-                  className='remove'
-                  onClick={formHandlers.deleteCom}
-                >
-                  Remove <img src={remove} alt='remove' />
-                </button>
+                  <button
+                    data-itemid={id}
+                    className='remove'
+                    onClick={formHandlers.deleteCom}
+                  >
+                    Remove <img src={remove} alt='remove' />
+                  </button>
+                </div>
               </div>
             ) : (
               <div key={id} className='lock'>
@@ -89,20 +91,22 @@ function ExperienceForm({ experience, formHandlers }) {
                 <div>From: {experience[id].fromDate}</div>
                 <div>To: {experience[id].toDate}</div>
 
-                <button
-                  data-itemid={id}
-                  className='edit'
-                  onClick={formHandlers.setIsActiveCom}
-                >
-                  <img src={lock} alt='edit' /> {'Edit'}
-                </button>
-                <button
-                  data-itemid={id}
-                  className='remove'
-                  onClick={formHandlers.deleteCom}
-                >
-                  Remove <img src={remove} alt='remove' />
-                </button>
+                <div className='buttons'>
+                  <button
+                    data-itemid={id}
+                    className='edit'
+                    onClick={formHandlers.setIsActiveCom}
+                  >
+                    <img src={lock} alt='edit' /> {'Edit'}
+                  </button>
+                  <button
+                    data-itemid={id}
+                    className='remove'
+                    onClick={formHandlers.deleteCom}
+                  >
+                    Remove <img src={remove} alt='remove' />
+                  </button>
+                </div>
               </div>
             );
           }

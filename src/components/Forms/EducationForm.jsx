@@ -44,21 +44,23 @@ function EducationForm({ education, formHandlers }) {
                   />
                 </div>
 
-                <button
-                  data-itemid={id}
-                  className='save'
-                  onClick={formHandlers.setIsActiveEdu}
-                >
-                  <img src={unlock} alt='save' /> {'Save'}
-                </button>
+                <div className='buttons'>
+                  <button
+                    data-itemid={id}
+                    className='save'
+                    onClick={formHandlers.setIsActiveEdu}
+                  >
+                    <img src={unlock} alt='save' /> {'Save'}
+                  </button>
 
-                <button
-                  data-itemid={id}
-                  className='remove'
-                  onClick={formHandlers.deleteEdu}
-                >
-                  Remove <img src={remove} alt='remove' />
-                </button>
+                  <button
+                    data-itemid={id}
+                    className='remove'
+                    onClick={formHandlers.deleteEdu}
+                  >
+                    Remove <img src={remove} alt='remove' />
+                  </button>
+                </div>
               </div>
             ) : (
               <div key={id} className='lock'>
@@ -66,20 +68,22 @@ function EducationForm({ education, formHandlers }) {
                 <div>Title of study: {education[id].title}</div>
                 <div>Date of completion: {education[id].date}</div>
 
-                <button
-                  data-itemid={id}
-                  className='edit'
-                  onClick={formHandlers.setIsActiveEdu}
-                >
-                  <img src={lock} alt='edit' /> {'Edit'}
-                </button>
-                <button
-                  data-itemid={id}
-                  className='remove'
-                  onClick={formHandlers.deleteEdu}
-                >
-                  Remove <img src={remove} alt='remove' />
-                </button>
+                <div className='buttons'>
+                  <button
+                    data-itemid={id}
+                    className='edit'
+                    onClick={formHandlers.setIsActiveEdu}
+                  >
+                    <img src={lock} alt='edit' /> {'Edit'}
+                  </button>
+                  <button
+                    data-itemid={id}
+                    className='remove'
+                    onClick={formHandlers.deleteEdu}
+                  >
+                    Remove <img src={remove} alt='remove' />
+                  </button>
+                </div>
               </div>
             );
           }
