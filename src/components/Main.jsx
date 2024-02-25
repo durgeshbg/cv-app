@@ -2,31 +2,14 @@ import { useState } from 'react';
 import Display from './Display';
 import From from './Forms/Form';
 import '../styles/Main.css';
+import { empty, example } from '../data';
 
 function Main() {
-  const [state, setState] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    education: {
-      default: {
-        name: '',
-        title: '',
-        date: '',
-        isActive: true,
-      },
-    },
-    experience: {
-      default: {
-        name: '',
-        position: '',
-        responsibilities: '',
-        fromDate: '',
-        toDate: '',
-        isActive: true,
-      },
-    },
-  });
+  const [state, setState] = useState(empty);
+
+  const loadExample = () => {
+    setState(example);
+  };
 
   const formHandlers = {
     changeName: (e) => {
@@ -145,6 +128,14 @@ function Main() {
   return (
     <>
       <main>
+        <div className='menubar'>
+          <button className='example' onClick={loadExample}>
+            Load Example
+          </button>
+          <button className='reset' onClick={() => setState(empty)}>
+            Reset
+          </button>
+        </div>
         <From state={state} formHandlers={formHandlers} />
         <Display {...state} />
       </main>
