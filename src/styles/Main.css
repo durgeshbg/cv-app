@@ -4,3 +4,16 @@ main {
   align-items: center;
   min-height: 80dvh;
 }
+
+.menubar {
+  position: fixed;
+  top: 60px;
+  left: 5px;
+}
+
+.menubar > button {
+  width: 100px;
+  background-color: #4d32a6;
+  color: white;
+  height: 50px;
+}
