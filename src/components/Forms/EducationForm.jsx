@@ -10,7 +10,7 @@ function EducationForm({ education, formHandlers }) {
         {Object.keys(education).map((id) => {
           {
             return education[id].isActive ? (
-              <div key={id} className={id}>
+              <div key={id} className={id + ' unlock'}>
                 <div className='name'>
                   <label>
                     School Name:
