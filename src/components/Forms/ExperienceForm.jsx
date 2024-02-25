@@ -10,7 +10,7 @@ function ExperienceForm({ experience, formHandlers }) {
         {Object.keys(experience).map((id) => {
           {
             return experience[id].isActive ? (
-              <div key={id} className={id + ' form'}>
+              <div key={id} className={id}>
                 <div className='name'>
                   <label>
                     Company Name:
