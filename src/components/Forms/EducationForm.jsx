@@ -12,45 +12,51 @@ function EducationForm({ education, formHandlers }) {
             return education[id].isActive ? (
               <div key={id} className={id + ' unlock'}>
                 <div className='name'>
-                  <label>
-                    School Name:
-                    <input
-                      type='text'
-                      value={education[id].name}
-                      onChange={formHandlers.changeEname}
-                      id={id}
-                    />
-                  </label>
+                  <label htmlFor={id + 'edu-name'}>School Name:</label>
+                  <input
+                    type='text'
+                    value={education[id].name}
+                    onChange={formHandlers.changeEname}
+                    id={id + 'edu-name'}
+                    data-itemid={id}
+                  />
                 </div>
 
                 <div className='title'>
-                  <label>
-                    Title of study:
-                    <input
-                      type='text'
-                      value={education[id].title}
-                      onChange={formHandlers.changeEtitle}
-                      id={id}
-                    />
-                  </label>
+                  <label htmlFor={id + 'edu-title'}>Title of study:</label>
+                  <input
+                    type='text'
+                    value={education[id].title}
+                    onChange={formHandlers.changeEtitle}
+                    id={id + 'edu-title'}
+                    data-itemid={id}
+                  />
                 </div>
 
                 <div className='edate'>
-                  <label>
-                    Completed:
-                    <input
-                      type='date'
-                      value={education[id].date}
-                      onChange={formHandlers.changeEdate}
-                      id={id}
-                    />
-                  </label>
+                  <label htmlFor={id + 'edu-edate'}>Completed:</label>
+                  <input
+                    type='date'
+                    value={education[id].date}
+                    onChange={formHandlers.changeEdate}
+                    id={id + 'edu-edate'}
+                    data-itemid={id}
+                  />
                 </div>
 
-                <button id={id} onClick={formHandlers.setIsActiveEdu}>
+                <button
+                  data-itemid={id}
+                  className='save'
+                  onClick={formHandlers.setIsActiveEdu}
+                >
                   <img src={unlock} alt='save' /> {'Save'}
                 </button>
-                <button id={id} className='remove' onClick={formHandlers.deleteEdu}>
+
+                <button
+                  data-itemid={id}
+                  className='remove'
+                  onClick={formHandlers.deleteEdu}
+                >
                   Remove <img src={remove} alt='remove' />
                 </button>
               </div>
@@ -60,10 +66,18 @@ function EducationForm({ education, formHandlers }) {
                 <div>Title of study: {education[id].title}</div>
                 <div>Date of completion: {education[id].date}</div>
 
-                <button id={id} onClick={formHandlers.setIsActiveEdu}>
+                <button
+                  data-itemid={id}
+                  className='edit'
+                  onClick={formHandlers.setIsActiveEdu}
+                >
                   <img src={lock} alt='edit' /> {'Edit'}
                 </button>
-                <button id={id} className='remove' onClick={formHandlers.deleteEdu}>
+                <button
+                  data-itemid={id}
+                  className='remove'
+                  onClick={formHandlers.deleteEdu}
+                >
                   Remove <img src={remove} alt='remove' />
                 </button>
               </div>

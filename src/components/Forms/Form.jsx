@@ -1,3 +1,4 @@
+import '../../styles/Form.css'
 import EducationForm from './EducationForm';
 import GeneralForm from './GeneralFrom';
 import ExperienceForm from './ExperienceForm';

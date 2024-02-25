@@ -47,17 +47,17 @@ function Main() {
 
     changeEname: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.education[e.target.id].name = e.target.value;
+      newState.education[e.target.dataset.itemid].name = e.target.value;
       setState(newState);
     },
     changeEtitle: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.education[e.target.id].title = e.target.value;
+      newState.education[e.target.dataset.itemid].title = e.target.value;
       setState(newState);
     },
     changeEdate: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.education[e.target.id].date = e.target.value;
+      newState.education[e.target.dataset.itemid].date = e.target.value;
       setState(newState);
     },
     addEdu: () => {
@@ -71,7 +71,7 @@ function Main() {
     deleteEdu: (e) => {
       if (Object.keys(state.education).length > 1) {
         const newState = JSON.parse(JSON.stringify(state));
-        delete newState.education[e.target.id];
+        delete newState.education[e.target.dataset.itemid];
         setState(newState);
       } else {
         console.log('Error: minimum one education field required');
@@ -79,34 +79,34 @@ function Main() {
     },
     setIsActiveEdu: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.education[e.target.id].isActive =
-        !newState.education[e.target.id].isActive;
+      newState.education[e.target.dataset.itemid].isActive =
+        !newState.education[e.target.dataset.itemid].isActive;
       setState(newState);
     },
 
     changeCname: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.experience[e.target.id].name = e.target.value;
+      newState.experience[e.target.dataset.itemid].name = e.target.value;
       setState(newState);
     },
     changeCposition: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.experience[e.target.id].position = e.target.value;
+      newState.experience[e.target.dataset.itemid].position = e.target.value;
       setState(newState);
     },
     changeCresponsibilities: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.experience[e.target.id].responsibilities = e.target.value;
+      newState.experience[e.target.dataset.itemid].responsibilities = e.target.value;
       setState(newState);
     },
     changeCfdate: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.experience[e.target.id].fromDate = e.target.value;
+      newState.experience[e.target.dataset.itemid].fromDate = e.target.value;
       setState(newState);
     },
     changeCtdate: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.experience[e.target.id].toDate = e.target.value;
+      newState.experience[e.target.dataset.itemid].toDate = e.target.value;
       setState(newState);
     },
     addCom: () => {
@@ -127,7 +127,7 @@ function Main() {
     deleteCom: (e) => {
       if (Object.keys(state.experience).length > 1) {
         const newState = JSON.parse(JSON.stringify(state));
-        delete newState.experience[e.target.id];
+        delete newState.experience[e.target.dataset.itemid];
         setState(newState);
       } else {
         console.log('Error: minimum one experience field required');
@@ -135,8 +135,9 @@ function Main() {
     },
     setIsActiveCom: (e) => {
       const newState = JSON.parse(JSON.stringify(state));
-      newState.experience[e.target.id].isActive =
-        !newState.experience[e.target.id].isActive;
+      console.log(e.target.dataset.itemid);
+      newState.experience[e.target.dataset.itemid].isActive =
+        !newState.experience[e.target.dataset.itemid].isActive;
       setState(newState);
     },
   };
