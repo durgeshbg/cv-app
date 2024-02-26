@@ -2,10 +2,33 @@
   font-family: monospace;
   font-weight: bold;
   border: 0.1px solid black;
-  width: 530px;
-  height: 75dvh;
-  padding: 20px;
+
+  width: 540px;
+  height: 735px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  position: fixed;
+  right: 100px;
+  top: 100px;
+}
+h3 {
+  font-size: 1.2rem;
+  background-color: rebeccapurple;
+  width: 150px;
+  border-radius: 50px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  padding: 1px;
+  color: white;
+}
+
+.display .education .date,
+.display .experience .duration {
+  background-color: rebeccapurple;
+  color: white;
+  width: max-content;
+  border-radius: 5px;
+  padding: 2px;
 }
