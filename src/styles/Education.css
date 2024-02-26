@@ -1,0 +1,15 @@
+.display .education {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+.display .education .item {
+  border-bottom: 1px solid rebeccapurple;
+}
+.display .education .item div {
+  margin-bottom: 10px;
+}
+.display .education .item .title {
+  font-size: 1.01rem;
+}

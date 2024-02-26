@@ -1,13 +1,16 @@
+import '../styles/Education.css'
+
 function Education(education) {
   return (
     <>
       <div className='education'>
+        <h3>Education</h3>
         {Object.keys(education).map((id) => {
           return (
             <div key={id} className={id + ' item'}>
-              <div className='name'>Edu Name: {education[id].name}</div>
-              <div className='title'>Edu Title: {education[id].title}</div>
-              <div className='date'>Edu Date: {education[id].date}</div>
+              <div className='title'>{education[id].title}</div>
+              <div className='name'>{education[id].name}</div>
+              <div className='date'>{education[id].date}</div>
             </div>
           );
         })}
