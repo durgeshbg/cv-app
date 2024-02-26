@@ -1,0 +1,23 @@
+.display .experience {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+.display .experience .name {
+  font-size: 1.01rem;
+  margin-bottom: 0.4rem;
+  text-decoration: underline;
+}
+.display .experience .item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.display .experience .position {
+  font-size: 0.9rem;
+}
+.display .experience .responsibilities {
+  font-weight: normal;
+  font-style: italic;
+}
