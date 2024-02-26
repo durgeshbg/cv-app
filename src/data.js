@@ -49,7 +49,7 @@ export const example = {
   experience: {
     default: {
       name: 'Google',
-      position: 'Inter',
+      position: 'Intern',
       responsibilities:
         'Inspecting server working, cloud infrastructure and managing testing.',
       fromDate: '2022-1-22',
