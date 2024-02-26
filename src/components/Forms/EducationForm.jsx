@@ -63,10 +63,10 @@ function EducationForm({ education, formHandlers }) {
                 </div>
               </div>
             ) : (
-              <div key={id} className='lock'>
-                <div>Name of the school: {education[id].name}</div>
-                <div>Title of study: {education[id].title}</div>
-                <div>Date of completion: {education[id].date}</div>
+              <div key={id} className={id + ' lock'}>
+                <div>{education[id].name}</div>
+                <div>{education[id].title}</div>
+                <div>{education[id].date}</div>
 
                 <div className='buttons'>
                   <button

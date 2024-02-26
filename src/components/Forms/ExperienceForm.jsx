@@ -85,11 +85,12 @@ function ExperienceForm({ experience, formHandlers }) {
               </div>
             ) : (
               <div key={id} className='lock'>
-                <div>Company Name: {experience[id].name}</div>
-                <div>Position: {experience[id].position}</div>
-                <div>Resposibilities: {experience[id].responsibilities}</div>
-                <div>From: {experience[id].fromDate}</div>
-                <div>To: {experience[id].toDate}</div>
+                <div>{experience[id].name}</div>
+                <div>{experience[id].position}</div>
+                <div>{experience[id].responsibilities}</div>
+                <div>
+                  {experience[id].fromDate} - {experience[id].toDate}
+                </div>
 
                 <div className='buttons'>
                   <button

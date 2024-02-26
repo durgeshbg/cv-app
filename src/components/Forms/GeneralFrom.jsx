@@ -41,9 +41,9 @@ function GeneralForm({ name, phone, email, formHandlers }) {
           </div>
         ) : (
           <div className='lock'>
-            <div>Name: {name}</div>
-            <div>Email: {email}</div>
-            <div>Phone: {phone}</div>
+            <div>{name}</div>
+            <div>{email}</div>
+            <div>{phone}</div>
           </div>
         )}
 

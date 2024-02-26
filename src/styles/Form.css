@@ -1,0 +1,108 @@
+/* GENERAL STYLES */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30dvw;
+  margin-left: 150px;
+
+  border-radius: 5px;
+  padding: 15px 30px;
+  background-color: #f1f1f1;
+  overflow: scroll;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+input {
+  width: 200px;
+  min-height: 30px;
+
+  border: none;
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+  padding: 0px 10px;
+}
+input:focus {
+  outline: none;
+  border: 0.1px solid orange;
+}
+
+.unlock div {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.lock div:not(.buttons) {
+  background-color: rebeccapurple;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* FORM SPECIFIC */
+.form .general,
+.form .education,
+.form .experience {
+  margin: 10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.unlock,
+.lock {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rebeccapurple;
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.lock {
+  font-weight: bolder;
+}
+
+.form .experience .lock,
+.form .experience .unlock {
+  min-height: 300px;
+}
+
+/* BUTTONS */
+button {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  padding: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.buttons .remove {
+  background-color: #db3131;
+}
+.buttons .remove:hover {
+  background-color: #e65959;
+}
+button.add {
+  background-color: #4ccd4c;
+  width: 80px;
+}
+button.add:hover {
+  background-color: #85ce85;
+}
